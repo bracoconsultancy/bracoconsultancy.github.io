@@ -1,4 +1,13 @@
+$font-size-base: 1rem;
+$h1-font-size:                $font-size-base * 2.25 ;
+$h2-font-size:                $font-size-base * 1.75 ;
+$h3-font-size:                $font-size-base * 1.25 ;
+$h4-font-size:                $font-size-base;
+$h5-font-size:                $font-size-base;
+$h6-font-size:                $font-size-base;
 $font-family-sans-serif: 'Comfortaa', cursive;
+$primary:       #38489e;
 $border-color: #fff;
-$body-color: #0e3f54;
+$body-color: #3b405a;
+$headings-color: $primary;
 $component-active-color: $body-color;

@@ -47,4 +47,9 @@ $(function() {
       $('nav [data-toggle="collapse"][href="#'+$('main').find('.collapse.show').attr('id')+'"]').trigger('click', [true]);
     }, 500)
   });
+
+  $('button[data-link], a[data-link]').on('click', function() {
+    console.log($(this).data("link"));
+    $('nav [href="'+$(this).data("link")+'"]').trigger('click');
+  })
 });

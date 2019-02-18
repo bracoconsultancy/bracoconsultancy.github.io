@@ -21,6 +21,9 @@ body {
                 width: 50%;
             }
         }
+        main {
+            flex-grow: 1;
+        }
     }
 }
 header {
@@ -35,8 +38,17 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgb(51,150,179);
-    background: radial-gradient(circle, rgba(51,150,179,1) 0%, rgba(31,112,157,1) 100%);
+    //background: rgb(51,150,179);
+    //background: radial-gradient(circle, rgba(51,150,179,1) 0%, rgba(31,112,157,1) 100%);
+//    background: rgb(51,134,179);
+//background: radial-gradient(circle, rgba(51,134,179,1) 0%, rgba(74,31,157,1) 100%);
+background: rgb(51,134,179);
+background: linear-gradient(45deg, rgba(51,134,179,1) 0%, rgba(74,31,157,1) 100%);
+
+    h2 {
+        border-left-color: #fff;
+    }
+
 }
 .logo-container {
     flex-grow: 1;
@@ -44,6 +56,11 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+
+    h1 {
+        border: 0;
+    }
 }
 
 .logo {
@@ -111,10 +128,10 @@ main {
 
     .close {
         position: absolute;
-        right: rem-calc(10);
-        top: rem-calc(10);
+        right: rem-calc(20);
+        top: rem-calc(20);
         opacity: 1;
-        color: $body-color;
+        color: $primary;
         z-index: 1;
     }
 }
@@ -141,6 +158,12 @@ body:not(.nav-is-collapsed) {
 
 .intro {
     max-width: rem-calc(700);
+}
+
+h1, h2{
+    border-left: $headings-color 3px solid;
+    padding-left: rem-calc(20);
+    margin-left: rem-calc(-20);
 }
 
 
