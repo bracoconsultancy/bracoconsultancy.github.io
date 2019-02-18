@@ -1,0 +1,7 @@
+@function rem-calc($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-unit($pxval);
+  }
+
+  @return ($pxval / 16) * 1rem;
+}
