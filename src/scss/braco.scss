@@ -15,9 +15,6 @@ body {
     &.nav-is-collapsed {
         header {
             @include media-breakpoint-up(md) {
-                width: 40%;
-            }
-            @include media-breakpoint-up(lg) {
                 width: 50%;
             }
         }
@@ -102,12 +99,10 @@ background: linear-gradient(45deg, rgba(51,134,179,1) 0%, rgba(74,31,157,1) 100%
         border: $border-color $border-width solid;
         background-color: $border-color;
         color: $body-color;
-        @include media-breakpoint-up(md) {
-            &:not([aria-expanded="true"]) {
-                &:not(:hover) {
-                    color: $border-color;
-                    background-color: transparent;
-                }
+        &:not([aria-expanded="true"]) {
+            &:not(:hover) {
+                color: $border-color;
+                background-color: transparent;
             }
         }
     }
@@ -123,13 +118,22 @@ main {
     .content {
         height: 100%;
         position: relative;
-        overflow: auto;
+        overflow-y: auto;
+        background:
+            linear-gradient(#fff 30%, rgba(255, 255, 255, 0)),
+            linear-gradient(rgba(255, 255, 255, 0), #fff 70%) 0 100%,
+            radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+            radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)) 0 100%;
+        background-repeat: no-repeat;
+        background-color: #fff;
+        background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+        background-attachment: local, local, scroll, scroll;
     }
 
     .close {
         position: absolute;
-        right: rem-calc(20);
-        top: rem-calc(20);
+        right: 0;
+        top: 0;
         opacity: 1;
         color: $primary;
         z-index: 1;
